@@ -17,7 +17,7 @@ function selectionSort(arr) {
       if (arrayCopy[j] < arrayCopy[min]) min = j;
     }
 
-    arrayCopy = swap(arrayCopy, i, min);
+    if (i !== min) arrayCopy = swap(arrayCopy, i, min);
   }
 
   return arrayCopy;
@@ -33,5 +33,5 @@ function swap(arr, idx1, idx2) {
   return arrCopy;
 }
 
-console.log(selectionSort([5, 15, 10, 3, 27, 35]));
+console.log(selectionSort([3, 5, 35, 27, 15, 10]));
 console.log(selectionSort([0, 2, 34, 22, 10, 19, 17]));
