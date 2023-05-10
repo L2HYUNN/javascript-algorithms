@@ -19,3 +19,16 @@ console.log(digitCount(1));
 console.log(digitCount(25));
 console.log(digitCount(314));
 console.log(digitCount(-314));
+
+function mostDigits(nums) {
+  let mostDigit = 0;
+
+  nums.forEach((num) => {
+    const digit = digitCount(num);
+    if (mostDigit < digit) mostDigit = digit;
+  });
+
+  return mostDigit;
+}
+
+console.log(mostDigits([23, 567, 89, 122343245, 90]));
