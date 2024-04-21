@@ -140,3 +140,18 @@ function binarySearch(arr, target) {
 }
 
 ```
+
+### 문자 정렬
+```js
+// 문자열 오름차순 정렬
+strArray.sort();
+
+// 문자열 내림차순 정렬
+strArray.sort().reverse();
+
+// 숫자 오름차순 정렬
+numArray.sort((a, b) => a - b);
+
+// 숫자 내림차순 정렬
+numArray.sort((a, b) => b - a);
+```
