@@ -11,7 +11,9 @@ function solution(input) {
 
   numbers.sort((a, b) => a - b);
 
-  return duplicatedPermutation(numbers, M);
+  return duplicatedPermutation(numbers, M)
+    .map((list) => list.join(" "))
+    .join("\n");
 
   function duplicatedPermutation(numbers, k) {
     const result = [];
