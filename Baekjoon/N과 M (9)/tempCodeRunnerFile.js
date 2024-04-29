@@ -1,0 +1,1 @@
+...permutation(numbers, M)
