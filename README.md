@@ -155,3 +155,47 @@ numArray.sort((a, b) => a - b);
 // 숫자 내림차순 정렬
 numArray.sort((a, b) => b - a);
 ```
+
+### DFS
+```js
+const graph = [[1, 2, 4], [0, 5], [0, 5], [4], [0, 3], [1, 2]];
+const visited = Array(6).fill(false);
+
+DFS(graph, 0, visited);
+
+function DFS(graph, v, visited) {
+  visited[v] = true;
+
+  for (let node of graph[v]) {
+    if (!visited[node]) {
+      dfs(graph, node, visited);
+    }
+  }
+}
+```
+
+
+### BFS
+```js
+const graph = [[1, 2, 4], [0, 5], [0, 5], [4], [0, 3], [1, 2]];
+const visited = Array(6).fill(false);
+
+BFS(graph, 0, visited);
+
+function BFS(graph, start, visited) {
+  const queue = new Queue();
+  queue.enqueue(start);
+  visited[start] = true;
+
+  while (queue.size()) {
+    const v = queue.dequeue();
+
+    for (const node of graph[v]) {
+      if (!visited[node]) {
+        queue.enqueue(node);
+        visited[node] = true;
+      }
+    }
+  }
+}
+```
