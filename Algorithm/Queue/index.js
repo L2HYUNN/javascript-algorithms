@@ -71,3 +71,39 @@ class Queue {
     return temp;
   }
 }
+
+class OptimizedQueue {
+  constructor() {
+    this.store = {}; // Stores the queue elements
+    this.front = 0; // Pointer to the front of the queue
+    this.rear = 0; // Pointer to the rear of the queue
+  }
+
+  size() {
+    return this.rear - this.front;
+  }
+
+  enqueue(value) {
+    this.store[this.rear] = value;
+    this.rear++;
+    return true;
+  }
+
+  dequeue() {
+    if (this.size() === 0) {
+      return undefined; // Return undefined if the queue is empty
+    }
+
+    const value = this.store[this.front];
+    delete this.store[this.front];
+    this.front++;
+
+    // Reset pointers if the queue is empty
+    if (this.size() === 0) {
+      this.front = 0;
+      this.rear = 0;
+    }
+
+    return value;
+  }
+}
