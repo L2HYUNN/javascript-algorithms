@@ -2,6 +2,8 @@
 
 자바스크립트를 이용한 알고리즘과 데이터 구조를 공부하며 작성한 코드를 기록합니다.
 
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dhl9810)](https://solved.ac/dhl9810/)
+
 ## List
 
 - JavaScript Algorithms and Data Structures Masterclass
